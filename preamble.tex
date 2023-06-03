@@ -46,14 +46,26 @@
 \usepackage{fdsymbol} % for nequal
 \usepackage{circuitikz}
 
-\pretolerance 16384
+%\pretolerance 16384
 
 \usepackage{gensymb} % \celsius
 
 \usepackage{siunitx}
 \sisetup{
   input-decimal-markers = {.,},
-  output-decimal-marker = {.},
+  output-decimal-marker = {,},
   separate-uncertainty,
   separate-uncertainty-units = repeat
 }
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\LARGE\bfseries}{\chaptertitlename\ \thechapter}{18pt}{\LARGE}
+\titleformat{\section}
+{\normalfont\fontsize{16}{18}\bfseries}{\thesection}{1em}{}
+
+\usepackage{pdflscape}
+
+\setlength{\columnsep}{32pt}
+
+\counterwithout{figure}{chapter}

@@ -1,1 +1,1 @@
-the manual for RStudio Server from a user's perspective
+Tallinna Ülikooli mehaanika praktikumi kursuse "Maxwelli pendli" praktilise ülesande peacecop kalmeri: raport.
