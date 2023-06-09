@@ -3,5 +3,9 @@ new_session: false
 delete_merged_file: true
 rmd_files: [
   "index.Rmd",
+  "rmd/eesmärgid.Rmd",
+  "rmd/töövahendid.Rmd",
+  "rmd/reeglistik.Rmd",
+  "rmd/teooria.Rmd",
   "references.Rmd"
 ]

@@ -1,0 +1,103 @@
+\onecolumn
+
+# Teooria
+
+Maxwelli pendel on agregaat, milles kahe mitteelastse võrdse pikkusega niidi otsas ripub pulk, mille ümber saab kerida need niidid ja mille saab seejärel lasta lahti kerides langusse, misjärel kerib pulk enda ümber ise niidid ja liigub üles tagasi jätkates üles-alla-liikumist perioodiliselt. Maxwelli pendliga saab mõõta ühtlase tihedusega pöördkeha intertsimomenti. Selleks keritakse niidid ümber pendlipulga ja kinnitatakse pulk magnethoidiku külge. Pulk on mõistagi magneti suhtes afiinne. Pendli taustal on vahemaa mõõtmise skaala, mille abil saab mõõta pulga massikeskme ja pendli allosas oleva sensori vahelise vahemaa ehk kõrguse. Kui pulk lastakse magneti küljest vabasse langemisse, siis see jõuab millalgi sensorini, mille abil mõõdetakse langemise ajavahemik. Pulga külge saab kinnitada eri ühtlase tihedusega pöördkehi, mille intertsimomenti soovitakse mõõta ja arvutada.
+
+Vastavalt [mehaanilise energia jäävuse seadusele](#conservation-of-mechanical-energy) on ühtlase tihedusega pöördkehade süsteemi mehaaniline energia ülemises asukohas sama mis alumises asukohas. Ülemises asendis on süsteemi potentsiaalne energia maksimaalne ja kineetiline energia puudub. Kui süsteem laskub, siis suureneb selle kineetiline energia ja väheneb potentsiaalne energia. See kineetiline energia jaguneb nii lineaarse laskumise ja pöörlemise kineetiliseks energiaks. Sensori juures ehk kõige madalamas punktis on süsteemi kineetiline energia suurim ja potentsiaalne energia puudub.
+
+Lineaarse laskumise kineetilise energia  valem on \@ref(eq:kinetic-energy) leheküljel `r render_pageref(reference = "eq:kinetic-energy")`.
+
+Joonisel \@ref(fig:pendulum-body-falling) leheküljel `r render_pageref(reference = "fig:pendulum-body-falling")` on näidatud, et vahemaa pendlikeha massikeskme algse asukoha ja lõppasukoha vahel pendlikeha püstiselt langedes on sama mis pendlikeha serval oleva punkti alg- ja lõppasukoha vahel massikeskme suhtes pendlikeha pööreldes, sest pendlikeha on servapidi kinnitatud niidi külge. Kuna need vahemaad on võrdsed ja ka ajavahemik, mille kestel massikese langeb või servapunkt oma lõplikku asukohta keha kõige madalamas asukohas jõuab, on sama, siis vastavalt kiiruse valemile \@ref(eq:velocity) leheküljel `r render_pageref(reference = "eq:velocity")` on pendlikeha massikeskme lineaarse püstise liikumise lõppkiirus sama mis selle pendlikeha lõplik tangentsiaalkiirus.
+    
+```{r label = "pendulum-body-falling", echo=FALSE, fig.cap = "Punkt pendlikeha serval läbib keha keereldes sama pika vahemaa (punane pendlikeha) kui pendlikeha massikese püstiselt lineaarselt langedes (must niit)."}
+include_external_graphics("rmd/pendlikeha-ümbermõõt-niidi-pikkus.svg")
+
+```
+
+Kuna nimetatud lineaarne ja tangentsiaalkiirus on võrdsed, siis saan avaldada nurkkiiruse tangentsiaalkiiruse kaudu pannes kokku valemid \@ref(eq:plane-angle) leheküljel `r render_pageref(reference = "eq:plane-angle")`, \@ref(eq:angular-velocity) leheküljel `r render_pageref(reference = "eq:angular-velocity")` ja \@ref(eq:velocity) leheküljel `r render_pageref(reference = "eq:velocity")` avaldiseks \@ref(eq:angular-velocity-by-tangential-velocity) leheküljel `r render_pageref(reference = "eq:angular-velocity-by-tangential-velocity")`.
+
+```{=tex}
+\begin{align}
+\omega = \frac{\mathrm{d}(\frac{s}{r})}{\mathrm{d}(t)} = \frac{\vec{v}}{r}.
+(\#eq:angular-velocity-by-tangential-velocity)
+\end{align}
+
+```
+
+Asendan kineetilise energia valemisse \@ref(eq:kinetic-energy) leheküljel `r render_pageref(reference = "eq:kinetic-energy")` tangentsiaalkiiruse valemist \@ref(eq:angular-velocity-by-tangential-velocity) leheküljel `r render_pageref(reference = "eq:angular-velocity-by-tangential-velocity")`, et saada avaldis \@ref(eq:rotational-kinetic-energy) leheküljel `r render_pageref(reference = "eq:rotational-kinetic-energy")`.
+
+```{=tex}
+\begin{align}
+E_\mathrm{k}(\text{angular}) = \frac{m \times (\omega \times r)^2}{2} = \frac{m \times \omega^2 \times r^2}{2}.
+(\#eq:rotational-kinetic-energy)
+\end{align}
+
+```
+
+Kuigi valem \@ref(eq:rotational-kinetic-energy) leheküljel `r render_pageref(reference = "eq:rotational-kinetic-energy")` on esitatud ühe osakese kineetilise energia kohta, kehtib sama valem nende summa ehk terve keha kohta ja sellest eeldusest tulenevalt saab sellesse valemisse asendada intertsimomendi valemist \@ref(eq:moment-of-inertia) leheküljel `r render_pageref(reference = "eq:moment-of-inertia")`, et saada avaldis \@ref(eq:rotational-kinetic-energy-by-moment-of-inertia) leheküljel `r render_pageref(reference = "eq:rotational-kinetic-energy-by-moment-of-inertia")`.
+
+```{=tex}
+\begin{align}
+E_\mathrm{k}(\text{angular}) = \frac{I \times \omega^2}{2}.
+(\#eq:rotational-kinetic-energy-by-moment-of-inertia)
+\end{align}
+
+```
+
+Kogu kineetiline energia on avaldatav lineaarse langemise (avaldis \@ref(eq:kinetic-energy) leheküljel `r render_pageref(reference = "eq:kinetic-energy")`) ja pöördliikumise kineetilise energia (avaldis \@ref(eq:rotational-kinetic-energy-by-moment-of-inertia) leheküljel `r render_pageref(reference = "eq:rotational-kinetic-energy-by-moment-of-inertia")`) summana (avaldis \@ref(eq:total-kinetic-energy) leheküljel `r render_pageref(reference = "eq:total-kinetic-energy")`).
+
+```{=tex}
+\begin{align}
+E_\mathrm{k} = \frac{m \cdot v^2}{2} + \frac{I \times \omega^2}{2}.
+(\#eq:total-kinetic-energy)
+\end{align}
+
+```
+
+Maxwelli pendli pöördkehade süsteemi mehaanilise energia jäävus on esitatud vastavalt mehaanilise energia jäävuse põhiseosele \@ref(eq:conservation-of-mechanical-energy) leheküljel `r render_pageref(reference = "eq:conservation-of-mechanical-energy")` kasutades potentsiaalse (avaldis \@ref(eq:potential-energy) leheküljel `r render_pageref(reference = "eq:potential-energy")`) ja kogu kineetilise energia seost (avaldis \@ref(eq:total-kinetic-energy) leheküljel `r render_pageref(reference = "eq:total-kinetic-energy")`) seoses \@ref(eq:maxwell-conservation) leheküljel `r render_pageref(reference = "eq:maxwell-conservation")`.
+
+```{=tex}
+\begin{align}
+\int{\vec{F}} \cdot \mathrm{d}(h_\mathrm{top}) + \frac{m \times v_\mathrm{top}^2}{2} + \frac{I \times \omega_\mathrm{top}^2}{2} = \int{\vec{F}} \cdot \mathrm{d}(h_\mathrm{bottom}) + \frac{m \times v_\mathrm{bottom}^2}{2} + \frac{I \times \omega_\mathrm{bottom}^2}{2},
+(\#eq:maxwell-conservation)
+\end{align}
+
+```
+
+milles
+
+$h$
+: pöördsüsteemi kõrgus
+
+$\mathrm{top}$
+: pendlikeha ülemine asukoht
+
+$\mathrm{bottom}$
+: pendlikeha alumine asukoht
+
+Asendan avaldisse \@ref(eq:maxwell-conservation) leheküljel `r render_pageref(reference = "eq:maxwell-conservation")` jõu valemist \@ref(eq:force) leheküljel `r render_pageref(reference = "eq:force")` ning avaldan inertsimomendi (avaldis \@ref(eq:I-of-Maxwell) leheküljel `r render_pageref(reference = "eq:I-of-Maxwell")`).
+
+```{=tex}
+\begin{align}
+m \times g \times h_\mathrm{top} + \frac{m \times v_\mathrm{top}^2}{2} + \frac{I \times \omega_\mathrm{top}^2}{2} &= m \times g \times h_\mathrm{bottom} + \frac{m \times v_\mathrm{bottom}^2}{2} + \frac{I \times \omega_\mathrm{bottom}^2}{2}\\
+\frac{I \times \omega_\mathrm{top}^2}{2} - \frac{I \times \omega_\mathrm{bottom}^2}{2} &= m \times g \times h_\mathrm{bottom} + \frac{m \times v_\mathrm{bottom}^2}{2}\\
+&- m \times g \times h_\mathrm{top} - \frac{m \times v_\mathrm{top}^2}{2}\\
+I \times (\frac{\omega_\mathrm{top}^2}{2} - \frac{\omega_\mathrm{bottom}^2}{2}) &= m \times (g \times (h_\mathrm{bottom} - h_\mathrm{top}) + \frac{v_\mathrm{bottom}^2 - v_\mathrm{top}^2}{2})\\
+I &= \frac{m \times (2 \times g \times (h_\mathrm{bottom} - h_\mathrm{top}) + v_\mathrm{bottom}^2 - v_\mathrm{top}^2)}{\omega_\mathrm{top}^2 - \omega_\mathrm{bottom}^2}.
+(\#eq:I-of-Maxwell)
+\end{align}
+
+```
+
+Arvestades, et ülemises asukohas on pendlikehal vaid potentsiaalne energia ja alumises asukohas ainult kineetiline energia, et ülemises asendis on asukoht ja kiirused \num{0}, lihtsustub inertsimomendi avaldis \@ref(eq:I-of-Maxwell) leheküljel `r render_pageref(reference = "eq:I-of-Maxwell")` valemiks \@ref(eq:I-of-Maxwell-simplified) leheküljel `r render_pageref(reference = "eq:I-of-Maxwell-simplified")`.
+
+```{=tex}
+\begin{align}
+I &= \frac{m \times (2 \times g \times h + v_\mathrm{bottom}^2)}{-\omega_\mathrm{bottom}^2} = -\frac{m \times (2 \times g \times h + v_\mathrm{bottom}^2)}{\omega_\mathrm{bottom}^2}.
+(\#eq:I-of-Maxwell-simplified)
+\end{align}
+
+```
+
+\twocolumn

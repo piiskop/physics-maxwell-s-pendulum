@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="97.909882mm"
+   height="82.764618mm"
+   viewBox="0 0 97.909882 82.764618"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="pendlikeha-ümbermõõt-niidi-pikkus.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1"
+     inkscape:cx="-160.5"
+     inkscape:cy="451"
+     inkscape:window-width="1920"
+     inkscape:window-height="1200"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid132"
+       originx="-35.580472"
+       originy="-26.572125" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient7169">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop7165" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:0;"
+         offset="1"
+         id="stop7167" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7169"
+       id="linearGradient7171"
+       x1="56.195728"
+       y1="36.572124"
+       x2="76.206718"
+       y2="36.572124"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-35.580472,-26.572126)">
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.76014;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path236"
+       cx="66.195724"
+       cy="99.336746"
+       rx="9.1199265"
+       ry="9.1199284" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:url(#linearGradient7171);stroke-width:1.76;stroke-linecap:square;stroke-dasharray:1.76, 1.76;stroke-dashoffset:3.52;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path236-7"
+       cx="66.195724"
+       cy="36.572124"
+       rx="9.1199265"
+       ry="9.1199284" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.55679;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="M 56.955208,37.179105 V 98.454131"
+       id="path909" />
+    <path
+       style="fill:#0018ff;fill-opacity:1;stroke:#1cff00;stroke-width:1.544;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="M 36.352472,36.572123 H 87.923737"
+       id="path965" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:14.1111px;font-family:'Alte Haas Grotesk';-inkscape-font-specification:'Alte Haas Grotesk Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.544;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       x="26.162292"
+       y="64.433937"
+       id="text3251"><tspan
+         sodipodi:role="line"
+         id="tspan3249"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.544"
+         x="26.162292"
+         y="64.433937" /></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:14.1111px;font-family:'Alte Haas Grotesk';-inkscape-font-specification:'Alte Haas Grotesk Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.544;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       x="61.860958"
+       y="70.309708"
+       id="text3255"><tspan
+         sodipodi:role="line"
+         id="tspan3253"
+         style="stroke-width:1.544"
+         x="61.860958"
+         y="70.309708">2 × π × r</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:14.1111px;font-family:'Alte Haas Grotesk';-inkscape-font-specification:'Alte Haas Grotesk Bold';fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1.544;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       x="80.443916"
+       y="103.53743"
+       id="text3255-3"><tspan
+         sodipodi:role="line"
+         id="tspan3253-6"
+         style="fill:#ff0000;fill-opacity:1;stroke-width:1.544"
+         x="80.443916"
+         y="103.53743">2 × π × r</tspan></text>
+    <ellipse
+       style="fill:#0018ff;fill-opacity:1;stroke:#000000;stroke-width:0.435666;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path5666"
+       cx="66.195724"
+       cy="99.336998"
+       rx="0.28216702"
+       ry="0.28216705" />
+    <ellipse
+       style="fill:#0018ff;fill-opacity:1;stroke:#000000;stroke-width:0.435666;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path5666-5"
+       cx="66.201218"
+       cy="36.572124"
+       rx="0.28216702"
+       ry="0.28216705" />
+  </g>
+</svg>
