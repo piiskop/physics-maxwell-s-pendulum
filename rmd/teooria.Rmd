@@ -100,4 +100,62 @@ I &= \frac{m \times (2 \times g \times h + v_\mathrm{bottom}^2)}{-\omega_\mathrm
 
 ```
 
+Kasutades tee pikkuse valemit muutumatu jõnksu korral \@ref(eq:path-length-by-jerk) leheküljel `r render_pageref(reference = "eq:path-length-by-jerk")`, tuletan lineaarse püstise langemise korral gravitatsioonist põhjustatud kiirenduse saades avaldise \@ref(eq:g) leheküljel `r render_pageref(reference = "eq:g")`.
+
+```{=tex}
+\begin{align}
+h &= \frac{0 \times t^3}{6} + \frac{g \times t^2}{2} + 0 \times t + 0,\\
+\frac{g \times t^2}{2} &= h,\\
+g &= \frac{2 \times h}{t^2}.
+(\#eq:g)
+\end{align}
+
+```
+
+Kasutades kiiruse valemit muutumatu jõnksu korral \@ref(eq:speed-by-jerk) leheküljel `r render_pageref(reference = "eq:speed-by-jerk")`, tuletan lõppkiiruse valemi püstise langemise puhul saades avaldise \@ref(eq:final-speed) leheküljel `r render_pageref(reference = "eq:final-speed")`, millesse asendan gravitatsioonist põhjustatud kiirenduse valemist \@ref(eq:g) leheküljel `r render_pageref(reference = "eq:g")`.
+
+```{=tex}
+\begin{align}
+v = \frac{0 \times t^2}{2} + g \times t + 0 = \frac{2 \times h}{t}.
+(\#eq:final-speed)
+\end{align}
+
+```
+
+Avaldan nurkkiiruse kasutades selle valemit tangentsiaalkiiruse järgi \@ref(eq:angular-velocity-by-tangential-velocity) leheküljel `r render_pageref(reference = "eq:angular-velocity-by-tangential-velocity")` ja asendades sellesse kiiruse valemist \@ref(eq:final-speed) leheküljel `r render_pageref(reference = "eq:final-speed")`, saades avaldise \@ref(eq:final-angular-speed) leheküljel `r render_pageref(reference = "eq:final-angular-speed")`.
+
+```{=tex}
+\begin{align}
+\omega = \frac{\frac{2 \times h}{t}}{r} = \frac{2 \times h}{r \times t}.
+(\#eq:final-angular-speed)
+\end{align}
+
+```
+
+Asendan Maxwelli pendli pendlikeha inertsimomendi valemisse \@ref(eq:I-of-Maxwell-simplified) leheküljel `r render_pageref(reference = "eq:I-of-Maxwell-simplified")` vahemaa põhise kiiruse valemist \@ref(eq:final-speed) leheküljel `r render_pageref(reference = "eq:final-speed")` ja nurkkiiruse valemist \@ref(eq:final-angular-speed) leheküljel `r render_pageref(reference = "eq:final-angular-speed")`, et saada inertsimomendi valem \@ref(eq:final-I-of-Maxwell) leheküljel `r render_pageref(reference = "eq:final-I-of-Maxwell")`, mille jaoks saab Maxwelli pendlit kasutades andmed sisse toppida.
+
+```{=tex}
+\begin{align}
+I = -\frac{m \times (2 \times g \times h + (\frac{2 \times h}{t})^2)}{(\frac{2 \times h}{r \times t})^2} = -m \times (\frac{g \times r^2 \times t^2}{2 \times h} + r^2) =\\
+-m \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1).
+(\#eq:final-I-of-Maxwell)
+\end{align}
+
+```
+
+Avaldan rõnga inertsimomendi kogu pendlikeha inertsimomendi ja pendlipulga inertsimomendi kaudu kasutades lõplikku Maxwelli pendli pendlikeha inertsimomendi valemit \@ref(eq:final-I-of-Maxwell) leheküljel `r render_pageref(reference = "eq:final-I-of-Maxwell")`, avaldisena \@ref(eq:I-of-ring) leheküljel `r render_pageref(reference = "eq:I-of-ring")`.
+
+```{=tex}
+\begin{align}
+I_\text{r} &= I - I_0 =\\
+-(m_0 + m_\text{r}) \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1) - (-m_0 \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1)) &=\\
+r^2 \times (\frac{g \times t^2}{2 \times h} + 1) \times (m_0 -m_0 - m_\text{r}) &=\\
+r^2 \times (\frac{g \times t^2}{2 \times h} + 1) \times (-m_\text{r}) &=\\
+-m_\text{r} \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1).
+(\#eq:I-of-ring)
+\end{align}
+
+```
+
+
 \twocolumn

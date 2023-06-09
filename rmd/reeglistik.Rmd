@@ -1,6 +1,8 @@
-# Reeglid
+# Baasreeglistik
 
-## Aeg
+## Aeg ja selle talitlused
+
+### Aeg
 
 ```{r label = "delta-nu-cs"}
 delta_nu_cs <- 9192631770
@@ -36,7 +38,7 @@ sekund
 
 \onecolumn
 
-## Vahemaa
+### Vahemaa
 
 Valguse kiirus vaakumis:
 
@@ -99,9 +101,7 @@ Dimensionaalanalüüs on esitatud avaldises \@ref(eq:dimensional-analysis-for-r)
 
 \twocolumn
 
-[]{#speed}
-
-## Tasapinna nurk
+### Tasapinna nurk
 
 Tasapinna nurk on selle nurga haarade vahelise kaare ja haara pikkuse nurgast kaareni suhe (valem \@ref(eq:plane-angle) leheküljel `r render_pageref(reference = "eq:plane-angle")`[@haynes_2014_crc(lk 2-1)]).
 
@@ -131,9 +131,9 @@ Dimensionaalanalüüs on esitatud avaldises \@ref(eq:dimensional-analysis-of-pla
 
 ```
 
-## Kiirus
+### Kiirus
 
-### Nurkkiirus
+#### Nurkkiirus
 
 nurkkiirus
 : nurk, mille võrra keha ajaühikus pöörleb[@haynes_2014_crc(lk 2-45)]
@@ -158,7 +158,7 @@ Dimensionaalanalüüs on esitatud avaldisena \@ref(eq:dimensional-analysis-of-an
 
 ```
 
-### Vahemaa kiirus
+#### Vahemaa kiirus
 
 kiirus
 : vahemaa muutumise määr ajas [@haynes_2014_crc(lk 2-67)]
@@ -195,7 +195,7 @@ v = |\vec{v}|.
 
 ```
 
-## Kiirendus
+### Kiirendus
 
 kiirendus
 : kiiruse muutumise kiirus aja suhtes [@haynes_2014_crc(lk 2-44)]
@@ -219,6 +219,100 @@ kus $\vec{v}$ on kiiruse vektor ja *t* on kestus [@haynes_2014_crc(lk 2-2)]. Dim
 ```
 
 mistõttu ühik on $\unit{\m\per\s\squared}$.
+
+### Jõnks
+
+jõnks
+: kiirenduse muut ajas[@thompson_snap(lk 2)] (avaldis \@ref(eq:jerk) leheküljel `r render_pageref(reference = "eq:jerk")`)
+
+```{=tex}
+\begin{align}
+w(t) = \frac{\frac{\frac{\mathrm{d}(r)}{\mathrm{d}(t)}}{\mathrm{d}(t)}}{\mathrm{d}(t)} = \frac{\frac{\mathrm{d}(v)}{\mathrm{d}(t)}}{\mathrm{d}(t)} = \frac{\mathrm{d}(a(t))}{\mathrm{d}(t)}
+(\#eq:jerk)
+\end{align}
+
+```
+
+Dimensionaalanalüüs on esitatud avaldises \@ref(eq:dimensional-analysis-of-jerk) leheküljel `r render_pageref(reference = "eq:dimensional-analysis-of-jerk")` ja sellest johtuvalt on ühik \unit{\m\per\s\cubed}.
+
+```{=tex}
+\begin{align}
+\mathrm{\frac{\frac{L}{T^2}}{T} = \frac{L}{T^3}}.
+(\#eq:dimensional-analysis-of-jerk)
+\end{align}
+
+```
+
+### Tuletused muutumatust jõnksust
+
+#### Kiirendus püsiva jõnksu kaudu
+
+Kiirenduse saab püsiva jõnksu kaudu avaldada integreerimise kaudu, nagu on näidatud seostes \@ref(eq:acceleration-by-jerk-with-integration-constants) leheküljel `r render_pageref(reference = "eq:acceleration-by-jerk-with-integration-constants")`[@a2016_38].
+
+```{=tex}
+\begin{align}
+\int{w(t)} \cdot \mathrm{d}(t) &= \int{\frac{\mathrm{d}(a(t))}{\mathrm{d}(t)}} \cdot \mathrm{d}(t),\\
+w(t) \cdot t + C &= a(t) + D,\\
+w(t) \cdot t + C - D &= a(t),
+(\#eq:acceleration-by-jerk-with-integration-constants)
+\end{align}
+
+```
+
+milles
+
+$C$, $D$
+: integreerimiskonstandid
+
+Näitan avaldises \@ref(eq:initial-acceleration) leheküljel `r render_pageref(reference = "eq:initial-acceleration")`, milline on kiirenduse funktsioon alghetkel.
+
+```{=tex}
+\begin{align}
+a(0) = w(0) \cdot 0 + C - D = C - D.
+(\#eq:initial-acceleration)
+\end{align}
+
+```
+
+Asendan algkiirenduse avaldisest \@ref(eq:initial-acceleration) leheküljel `r render_pageref(reference = "eq:initial-acceleration")` integreerimiskonstandid kiirenduse funktsiooni avaldisse \@ref(eq:acceleration-by-jerk-with-integration-constants) leheküljel `r render_pageref(reference = "eq:acceleration-by-jerk-with-integration-constants")` saades lõpliku kiirendusfunktsiooni \@ref(eq:acceleration-at-constant-jerk) leheküljel `r render_pageref(reference = "eq:acceleration-at-constant-jerk")` tingimusel, et jõnks on muutumatu.
+
+```{=tex}
+\begin{align}
+a(t) = w(t) \cdot t + a(0).
+(\#eq:acceleration-at-constant-jerk)
+\end{align}
+
+```
+
+#### Kiirus püsiva jõnksu kaudu
+
+Kiiruse saab püsiva jõnksu kaudu avaldada integreerimise kaudu, nagu on näidatud seostes \@ref(eq:speed-by-jerk) leheküljel `r render_pageref(reference = "eq:speed-by-jerk")` kasutades kiirenduse valemit kiiruse kaudu \@ref(eq:a) leheküljel `r render_pageref(reference = "eq:a")` ja kiirenduse valemit jõnksu kaudu \@ref(eq:acceleration-at-constant-jerk) leheküljel `r render_pageref(reference = "eq:acceleration-at-constant-jerk")`.
+
+```{=tex}
+\begin{align}
+\int{a(t)} \cdot \mathrm{d}(t) &= \int{\frac{\mathrm{d}(v(t))}{\mathrm{d}(t)}} \cdot \mathrm{d}(t),\\
+\int{w(t) \cdot t + a(0)} \cdot \mathrm{d}(t) &= \int{\frac{\mathrm{d}(v(t))}{\mathrm{d}(t)}} \cdot \mathrm{d}(t),\\
+\frac{w(t) \times t^2}{2} + a(0) \times t + C &= v(t) + D,\\
+\frac{w(t) \times t^2}{2} + a(0) \times t + v(0) &= v(t).
+(\#eq:speed-by-jerk)
+\end{align}
+
+```
+
+#### Vahemaa pikkus püsiva jõnksu kaudu
+
+Tee pikkuse saab püsiva jõnksu kaudu avaldada integreerimise kaudu, nagu on näidatud seostes \@ref(eq:path-length-by-jerk) leheküljel `r render_pageref(reference = "eq:path-length-by-jerk")` kasutades kiiruse valemit tee pikkuse kaudu \@ref(eq:velocity) leheküljel `r render_pageref(reference = "eq:velocity")` ja kiiruse valemit muutumatu jõnksu kaudu \@ref(eq:speed-by-jerk) leheküljel `r render_pageref(reference = "eq:speed-by-jerk")`.
+
+```{=tex}
+\begin{align}
+\int{v(t)} \cdot \mathrm{d}(t) &= \int{\frac{\mathrm{d}(r)}{\mathrm{d}(t)}} \cdot \mathrm{d}(t), \\
+\int{\frac{w(t) \times t^2}{2} + a(0) \times t + v(0)}  \times \mathrm{d}(t) &= \int{\frac{\mathrm{d}(r(t))}{\mathrm{d}(t)}} \times \mathrm{d}(t), \\
+\frac{w(t) \times t^3}{6} + \frac{a(0) \times t^2}{2} + v(0) \times t + C &= r(t) + D, \\
+\frac{w(t) \times t^3}{6} + \frac{a(0) \times t^2}{2} + v(0) \times t + r(0) &= r(t)
+(\#eq:path-length-by-jerk)
+\end{align}
+
+```
 
 \onecolumn
 
@@ -329,7 +423,7 @@ kus *m* on mass ja $\vec{a}$ on kiirenduse vektor [@haynes_2014_crc(lk 2-2)]. Im
 
 ```{=tex}
 \begin{align}
-\mathrm{M \cdot \frac{L}{T^2} = \frac{L \cdot M}{T^2}}.
+\mathrm{M \times \frac{L}{T^2} = \frac{L \times M}{T^2}}.
 (\#eq:dimensional-analysis-for-force)
 \end{align}
 ```
