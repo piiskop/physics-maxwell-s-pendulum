@@ -1,0 +1,54 @@
+# Amplituudi kahanemine sõltuvalt pendlikeha massist
+
+\onecolumn
+
+## Töö käik
+
+1. Kinnitasin pendlile rõnga.
+
+2. Lasin pendli pendeldama. Loendasin, mitme võnke järel oli pendli võnkeamplituud vähenenud poole esialgse kõrguse võrra. Kandsin tulemused tabelisse \@ref(tab:amplitudes) leheküljel `r render_pageref(reference = "tab:amplitudes")`.
+
+3. Vahetasin rõnga.
+
+4. Kordasin sammu \num{2}.
+
+5. Eemaldasin rõnga.
+
+6. Kordasin sammu \num{2}.
+
+```{r label = "amplitudes"}
+m_ring <- c(m_1, m_2, 0)
+number_of_oscillations <- c(12, 15, 9)
+number_of_trials <- length(m_ring)
+index <- seq(1:number_of_trials)
+
+data_frame <- data.frame(
+  index,
+  m_ring,
+  number_of_oscillations
+)
+
+librarian::shelf(c(
+  "dplyr",
+  "kableExtra"
+))
+
+colnames(data_frame) <- c(
+  "Katse nr",
+  paste("$\\frac{\\text{Rõnga mass}}{\\unit{\\kg}}$", sep = ""),
+  "Võngete arv, kui Maxwelli pendli amplituud oli vähenenud poole võrra"
+)
+
+print_table(
+  table = data_frame,
+  caption = "Maxwelli pendli võnkumiste sumbumine."
+) %>%
+  column_spec(3, width = "16em")
+
+```
+
+\twocolumn
+
+## Andmeanalüüs
+
+Mida suurema massiga pendlikeha on, seda rohkem võnkeid Maxwelli pendel teeb, enne kui selle esialgsest amplituudist jääb järele pool esialgset amplituudi.

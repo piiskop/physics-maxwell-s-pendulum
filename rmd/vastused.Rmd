@@ -1,0 +1,53 @@
+# Vastused küsimustele
+
+## Takistusjõud
+
+### Küsimus
+
+Nimetage milliseid takistusjõude tuleb pendlil võnkumisel ületada?
+
+### Vastus
+
+Pendlil tuleb võnkumisel ületada nt hõõrde- ja õhutakistuse jõudu.
+
+## Reaalsus
+
+### Küsimus
+
+Tooge näiteid, kus reaalses elus kasutatakse Maxwelli pendli laadseid pendleid.
+
+### Vastus
+
+Maxwelli pendli laadne pendel on nt mänguvurr, mida sõrme otsas mängitakse.
+
+## Sumbuvus
+
+### Küsimus
+
+Mida näitab Maxwelli pendli pendeldamise sumbuvus pendli energia seisukohast?
+
+### Vastus
+
+Maxwelli pendli pendeldamise sumbuvus pendli energia seisukohast näitab, et mehaaniline energia muundub soojusenergiaks.
+
+## Energia jäävusseadus
+
+### Küsimus
+
+Kas ja kuidas Teie sooritatud katse kinnitab energia jäävusseadust?
+
+### Vastus
+
+Minu sooritatud eksperiment ei kinnita otseselt energia jäävusseadust, sest tegemist on sumbuva võnkumisega.
+
+## Koguenergia
+
+### Küsimus
+
+Interpreteerige valemit \@ref(eq:mechanical-energy-top-bottom) leheküljel `r render_pageref(reference = "eq:mechanical-energy-top-bottom")`, kuidas saaks suurendada pendli koguenergiat? Millises
+pendliasendis on potentsiaalne energia suurim ja millises asendis kineetiline energia suurim?
+Kuidas mõjutab pendli koguenergiat pendli nurkkiirus?
+
+### Vastus
+
+Energia enne liikumist on võrdne energiaga pärast liikumist. Pendli koguenergiat saab suurendada suurendades pendlikeha massi, langemise vahemaa pikkust ja/või pendlikeha inertsimomenti. Potentsiaalne energia on suurim pendlikeha ülemises asukohas ja kineetiline energia on suurim alumises asukohas. Mida suurem on nurkkiirus, seda suurem on pendli koguenergia.

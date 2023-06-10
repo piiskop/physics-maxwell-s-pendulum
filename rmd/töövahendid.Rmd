@@ -9,8 +9,11 @@ m_1 <- .2558
 
 2. rõngas massiga $m_1 = \qty{`r as.character(m_1)`}{\kg}$,
 
-3. rõngas massiga $m_2 = \qty{0,395}{\kg}$,
+```{r label = "second-disc"}
+m_2 <- .395
 
-4. rõngas massiga $m_3 = \qty{0,524}{\kg}$ ja
+```
 
-5. nihik.
+3. rõngas massiga $m_2 = \qty{`r as.character(m_2)`}{\kg}$,
+
+4. nihik.

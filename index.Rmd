@@ -229,5 +229,8 @@ render_color <- function(color, text) {
 
 ```
 
-# Introduction {-}
+# Eesmärgid
 
+1. Mehhaanilise energia muundumine ühest liigist teise Maxwelli pendli näitel tundma õpitud.
+
+2. Sümmeetrilise keha intertsimoment lähtudes energia jäävuse ja muundumise seadusest määratud.

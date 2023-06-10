@@ -1,0 +1,103 @@
+# Lisapendlikeha inertsimoment
+
+\onecolumn
+
+## Töökäik
+
+1. Kontrollisin, et pendlikeha ripuks vertikaalselt ja selle ketas asuks katseseadme
+fotoelektrilise anduri vahes. Vajadusel korrigeerisin katseseadme korpuse
+asendit jalgkruvide abil, samuti nööride pikkust.
+
+2. Ühendasin pistiku elektrivõrku ja vajutasin nupule *Võrk* (*Сеть*). Seejärel hakkas
+helenduma ajamõõturi numbrilaud.
+
+3. Pöörasin pendlikeha ja kerisin niiti selle teljel korralikult keerd-keeru
+kõrvale.
+
+4. Jõudnud ülemisse asendisse, puudutasin pendlikeha ketta äärega elektromagneti harusid.
+Pendlikeha jäi nende külge kinni. Pöörasin tähelepanu sellele, et niit ei oleks lõpus väga
+tugevasti teljele keritud. 
+
+5. Kui vajutasin nupule *Käivitus* (*Пуск*), siis katkes vool elektromagnetis ja pendlikeha
+hakkas langema. Eraldumist võis pisut aidata käega. Ühteaegu käivitus ajamõõtur. Viimane töötas seni, kuni pendlikeha jõudis
+alumisse asendisse (asendi fikseeris automaatselt fotoelektriline andur). Märkisin mõõdetud ajavahemiku tabelisse \@ref(tab:falling) leheküljel `r render_pageref(reference = "tab:falling")`. Ajamõõturi nullimiseks vajutasin nupule
+*Nullimine* – *Сбрось*.
+
+6. Kordasin samme \numrange{3}{5} neli korda.
+
+7. Lasen arvutada keskmise langemisaja.
+
+8. Pendli kettale panin rõnga, mille inertsimomenti
+soovisin määrata. See oli rõngas raskusega \qty{`r as.character(m_1)`}{\kg}. Rõngas pidi olema surutud kettale paralleelselt kuni takistuseni.
+
+9. Kordasin samme \numrange{3}{7}.
+
+10. Mõõtsin nihikuga pendelkeha telje raadiuse koos niidiga ja märkisin tulemuse üles.
+
+    ```{r label = "r"}
+    r <- 1.11e-2 / 2
+
+    ```
+
+    Pendelkeha telje raadius koos niidiga oli \qty{`r as.character(r)`}{\m}.
+
+11. Mõõtsin pendli pikkuse, mis oli võrdne selle ülestõstmise kõrgusega. Viimase määrasin ära seadme sambal oleva mõõteskaala abil pendliketta alumise ääre järgi.
+
+    ```{r label = "h"}
+    h <- 36.5e-2
+    
+    ```
+    
+    Pendli pikkus oli \qty{`r as.character(h)`}{\m}.
+
+```{r label = "falling"}
+t_0 <- c(1.22, 1.22, 1.22, 1.22, 1.22)
+mean_of_t_0 <- mean(t_0)
+t_0_with_mean <- c(t_0, mean_of_t_0)
+t_1 <- c(1.9, 1.9, 1.9, 1.9, 1.9)
+mean_of_t_1 <- mean(t_1)
+t_1_with_mean <- c(t_1, mean_of_t_1)
+number_of_trials <- length(t_0)
+index <- seq(1:number_of_trials)
+index_with_mean <- c(index, "Keskmine")
+
+data_frame <- data.frame(
+  index_with_mean,
+  t_0_with_mean,
+  t_1_with_mean
+)
+
+m_0 <- 154e-3
+m <- m_1 + m_0
+
+colnames(data_frame) <- c(
+  "Katse nr",
+  paste("$\\frac{\\text{Aeg massiga \\qty{", m_0, "}{\\kg}}}{\\unit{\\s}}$", sep = ""),
+  paste("$\\frac{\\text{Aeg massiga \\qty{", m, "}{\\kg}}}{\\unit{\\s}}$", sep = "")
+)
+
+librarian::shelf(c(
+  "dplyr",
+  "kableExtra"
+))
+
+print_table(
+  table = data_frame,
+  caption = "Maxwelli pendli alla langemise aeg."
+) %>%                                          # 4
+  row_spec(number_of_trials, hline_after = TRUE)
+
+```
+
+\twocolumn
+
+## Andmeanalüüs
+
+Lasen arvutada Maxwelli pendli pendlikeha külge kinnitatud rõngast lisapendlikeha inertsimomendi kasutades valemit \@ref(eq:I-of-ring) leheküljel `r render_pageref(reference = "eq:I-of-ring")`.
+
+```{r label = "moment-of-inertia"}
+I_r <- r^2 * (g_Tallinn * (m_0 * (mean_of_t_0^2 - mean_of_t_1^2) - m_1 * mean_of_t_1^2) - 2 * h * m_1) / (2 * h)
+
+```
+
+Rõnga inertsimoment on \qty{`r as.character(signif(x = I_r, digits = 3))`}{\kg\m\squared}.

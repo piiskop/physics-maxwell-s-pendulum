@@ -195,6 +195,8 @@ v = |\vec{v}|.
 
 ```
 
+\onecolumn
+
 ### Kiirendus
 
 kiirendus
@@ -219,6 +221,23 @@ kus $\vec{v}$ on kiiruse vektor ja *t* on kestus [@haynes_2014_crc(lk 2-2)]. Dim
 ```
 
 mistõttu ühik on $\unit{\m\per\s\squared}$.
+
+Joonisel \@ref(fig:cities) leheküljel `r render_pageref(reference = "fig:cities")` on näidatud gravitatsioonist põhjustatud kiirendus eri piirkondades Maal.
+
+(ref:caption-for-cities) Gravitatsioonist põhjustatud kiirendus eri Maa paigus[@elert_2019_glenn].
+
+```{r label = "cities", echo = FALSE, fig.cap = "(ref:caption-for-cities)", echo = FALSE, out.extra="angle = 90", out.width=".92\\textheight"}
+include_external_graphics("rmd/g.png")
+
+```
+
+```{r label = "g"}
+g <- 9.8
+g_Tallinn <- 9.82
+
+```
+
+\twocolumn
 
 ### Jõnks
 
@@ -284,6 +303,8 @@ a(t) = w(t) \cdot t + a(0).
 
 ```
 
+\onecolumn
+
 #### Kiirus püsiva jõnksu kaudu
 
 Kiiruse saab püsiva jõnksu kaudu avaldada integreerimise kaudu, nagu on näidatud seostes \@ref(eq:speed-by-jerk) leheküljel `r render_pageref(reference = "eq:speed-by-jerk")` kasutades kiirenduse valemit kiiruse kaudu \@ref(eq:a) leheküljel `r render_pageref(reference = "eq:a")` ja kiirenduse valemit jõnksu kaudu \@ref(eq:acceleration-at-constant-jerk) leheküljel `r render_pageref(reference = "eq:acceleration-at-constant-jerk")`.
@@ -313,8 +334,6 @@ Tee pikkuse saab püsiva jõnksu kaudu avaldada integreerimise kaudu, nagu on n�
 \end{align}
 
 ```
-
-\onecolumn
 
 []{#mass}
 

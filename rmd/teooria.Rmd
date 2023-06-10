@@ -49,7 +49,7 @@ Kogu kineetiline energia on avaldatav lineaarse langemise (avaldis \@ref(eq:kine
 
 ```{=tex}
 \begin{align}
-E_\mathrm{k} = \frac{m \cdot v^2}{2} + \frac{I \times \omega^2}{2}.
+E_\mathrm{k} = \frac{m \times v^2}{2} + \frac{I \times \omega^2}{2}.
 (\#eq:total-kinetic-energy)
 \end{align}
 
@@ -59,7 +59,7 @@ Maxwelli pendli pöördkehade süsteemi mehaanilise energia jäävus on esitatud
 
 ```{=tex}
 \begin{align}
-\int{\vec{F}} \cdot \mathrm{d}(h_\mathrm{top}) + \frac{m \times v_\mathrm{top}^2}{2} + \frac{I \times \omega_\mathrm{top}^2}{2} = \int{\vec{F}} \cdot \mathrm{d}(h_\mathrm{bottom}) + \frac{m \times v_\mathrm{bottom}^2}{2} + \frac{I \times \omega_\mathrm{bottom}^2}{2},
+\int{\vec{F}} \times \mathrm{d}(h_\mathrm{top}) + \frac{m \times v_\mathrm{top}^2}{2} + \frac{I \times \omega_\mathrm{top}^2}{2} = \int{\vec{F}} \times \mathrm{d}(h_\mathrm{bottom}) + \frac{m \times v_\mathrm{bottom}^2}{2} + \frac{I \times \omega_\mathrm{bottom}^2}{2},
 (\#eq:maxwell-conservation)
 \end{align}
 
@@ -80,7 +80,7 @@ Asendan avaldisse \@ref(eq:maxwell-conservation) leheküljel `r render_pageref(r
 
 ```{=tex}
 \begin{align}
-m \times g \times h_\mathrm{top} + \frac{m \times v_\mathrm{top}^2}{2} + \frac{I \times \omega_\mathrm{top}^2}{2} &= m \times g \times h_\mathrm{bottom} + \frac{m \times v_\mathrm{bottom}^2}{2} + \frac{I \times \omega_\mathrm{bottom}^2}{2}\\
+m \times g \times h_\mathrm{top} + \frac{m \times v_\mathrm{top}^2}{2} + \frac{I \times \omega_\mathrm{top}^2}{2} &= m \times g \times h_\mathrm{bottom} + \frac{m \times v_\mathrm{bottom}^2}{2} + \frac{I \times \omega_\mathrm{bottom}^2}{2}(\#eq:mechanical-energy-top-bottom)\\
 \frac{I \times \omega_\mathrm{top}^2}{2} - \frac{I \times \omega_\mathrm{bottom}^2}{2} &= m \times g \times h_\mathrm{bottom} + \frac{m \times v_\mathrm{bottom}^2}{2}\\
 &- m \times g \times h_\mathrm{top} - \frac{m \times v_\mathrm{top}^2}{2}\\
 I \times (\frac{\omega_\mathrm{top}^2}{2} - \frac{\omega_\mathrm{bottom}^2}{2}) &= m \times (g \times (h_\mathrm{bottom} - h_\mathrm{top}) + \frac{v_\mathrm{bottom}^2 - v_\mathrm{top}^2}{2})\\
@@ -145,17 +145,43 @@ I = -\frac{m \times (2 \times g \times h + (\frac{2 \times h}{t})^2)}{(\frac{2 \
 
 Avaldan rõnga inertsimomendi kogu pendlikeha inertsimomendi ja pendlipulga inertsimomendi kaudu kasutades lõplikku Maxwelli pendli pendlikeha inertsimomendi valemit \@ref(eq:final-I-of-Maxwell) leheküljel `r render_pageref(reference = "eq:final-I-of-Maxwell")`, avaldisena \@ref(eq:I-of-ring) leheküljel `r render_pageref(reference = "eq:I-of-ring")`.
 
-```{=tex}
+\begin{landscape}
+
 \begin{align}
 I_\text{r} &= I - I_0 =\\
--(m_0 + m_\text{r}) \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1) - (-m_0 \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1)) &=\\
-r^2 \times (\frac{g \times t^2}{2 \times h} + 1) \times (m_0 -m_0 - m_\text{r}) &=\\
-r^2 \times (\frac{g \times t^2}{2 \times h} + 1) \times (-m_\text{r}) &=\\
--m_\text{r} \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1).
+-(m_0 + m_\text{r}) \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1) - (-m_0 \times r^2 \times (\frac{g \times t_0^2}{2 \times h} + 1)) &=\\
+r^2 \times (m_0 \times \frac{g \times t_0^2 + 2 \times h}{2 \times h} - (m_0 + m_r) \times \frac{g \times t^2 + 2 \times h}{2 \times h}) &=\\
+\frac{r^2 \times (g \times m_0 \times t_0^2 + 2 \times h \times m_0 - g \times m_0 \times t^2 -2 \times h \times m_0 - g \times m_r \times t^2 - 2 \times h \times m_r)}{2 \times h} &=\\
+\frac{r^2 \times (g \times (m_0 \times (t_0^2 - t^2) - m_r \times t^2) - 2 \times h \times m_r)}{2 \times h},
 (\#eq:I-of-ring)
 \end{align}
 
-```
+milles
 
+$I_0$
+: Maxwelli pendli originaalse pendlikeha inertsimoment
+
+$m_0$
+: Maxwelli pendli originaalse pendlikeha mass
+
+$m_r$
+: Maxwelli pendli lisapendlikeha mass
+
+$r$
+: Maxwelli pendli originaalse pendlikeha koos niidiga raadius
+
+$g$
+: gravitatsioonist tingitud kiirendus
+
+$t$
+: Maxwelli pendli pendlikeha langemise aeg
+
+$h$
+: Maxwelli pendli pendlikeha langemise vahemaa pikkus
+
+$t_0$
+: Maxwelli pendli originaalse pendlikeha langemise aeg
+
+\end{landscape}
 
 \twocolumn
