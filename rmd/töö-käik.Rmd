@@ -96,7 +96,7 @@ print_table(
 Lasen arvutada Maxwelli pendli pendlikeha külge kinnitatud rõngast lisapendlikeha inertsimomendi kasutades valemit \@ref(eq:I-of-ring) leheküljel `r render_pageref(reference = "eq:I-of-ring")`.
 
 ```{r label = "moment-of-inertia"}
-I_r <- r^2 * (g_Tallinn * (m_0 * (mean_of_t_0^2 - mean_of_t_1^2) - m_1 * mean_of_t_1^2) - 2 * h * m_1) / (2 * h)
+I_r <- r^2 * (g_Tallinn * (m_0 * (mean_of_t_1^2 - mean_of_t_0^2) + m_1 * mean_of_t_1^2) - 2 * h * m_1) / (2 * h)
 
 ```
 

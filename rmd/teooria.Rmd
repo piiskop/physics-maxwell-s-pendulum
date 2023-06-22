@@ -94,7 +94,7 @@ Arvestades, et ülemises asukohas on pendlikehal vaid potentsiaalne energia ja a
 
 ```{=tex}
 \begin{align}
-I &= \frac{m \times (2 \times g \times h + v_\mathrm{bottom}^2)}{-\omega_\mathrm{bottom}^2} = -\frac{m \times (2 \times g \times h + v_\mathrm{bottom}^2)}{\omega_\mathrm{bottom}^2}.
+I &= \frac{m \times (2 \times g \times -h + v_\mathrm{bottom}^2)}{-\omega_\mathrm{bottom}^2} = -\frac{m \times (2 \times g \times -h + v_\mathrm{bottom}^2)}{\omega_\mathrm{bottom}^2}.
 (\#eq:I-of-Maxwell-simplified)
 \end{align}
 
@@ -136,8 +136,8 @@ Asendan Maxwelli pendli pendlikeha inertsimomendi valemisse \@ref(eq:I-of-Maxwel
 
 ```{=tex}
 \begin{align}
-I = -\frac{m \times (2 \times g \times h + (\frac{2 \times h}{t})^2)}{(\frac{2 \times h}{r \times t})^2} = -m \times (\frac{g \times r^2 \times t^2}{2 \times h} + r^2) =\\
--m \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1).
+I = -\frac{m \times (2 \times g \times -h + (\frac{2 \times h}{t})^2)}{(\frac{2 \times h}{r \times t})^2} = -m \times (\frac{-g \times r^2 \times t^2}{2 \times h} + r^2) =\\
+-m \times r^2 \times (\frac{-g \times t^2}{2 \times h} + 1).
 (\#eq:final-I-of-Maxwell)
 \end{align}
 
@@ -149,10 +149,10 @@ Avaldan rõnga inertsimomendi kogu pendlikeha inertsimomendi ja pendlipulga iner
 
 \begin{align}
 I_\text{r} &= I - I_0 =\\
--(m_0 + m_\text{r}) \times r^2 \times (\frac{g \times t^2}{2 \times h} + 1) - (-m_0 \times r^2 \times (\frac{g \times t_0^2}{2 \times h} + 1)) &=\\
-r^2 \times (m_0 \times \frac{g \times t_0^2 + 2 \times h}{2 \times h} - (m_0 + m_r) \times \frac{g \times t^2 + 2 \times h}{2 \times h}) &=\\
-\frac{r^2 \times (g \times m_0 \times t_0^2 + 2 \times h \times m_0 - g \times m_0 \times t^2 -2 \times h \times m_0 - g \times m_r \times t^2 - 2 \times h \times m_r)}{2 \times h} &=\\
-\frac{r^2 \times (g \times (m_0 \times (t_0^2 - t^2) - m_r \times t^2) - 2 \times h \times m_r)}{2 \times h},
+-(m_0 + m_\text{r}) \times r^2 \times (\frac{-g \times t^2}{2 \times h} + 1) - (-m_0 \times r^2 \times (\frac{-g \times t_0^2}{2 \times h} + 1)) &=\\
+r^2 \times (m_0 \times \frac{-g \times t_0^2 + 2 \times h}{2 \times h} - (m_0 + m_r) \times \frac{-g \times t^2 + 2 \times h}{2 \times h}) &=\\
+\frac{r^2 \times (-g \times m_0 \times t_0^2 + 2 \times h \times m_0 + g \times m_0 \times t^2 -2 \times h \times m_0 + g \times m_r \times t^2 - 2 \times h \times m_r)}{2 \times h} &=\\
+\frac{r^2 \times (g \times (m_0 \times (t^2 - t_0^2) + m_r \times t^2) - 2 \times h \times m_r)}{2 \times h},
 (\#eq:I-of-ring)
 \end{align}
 
